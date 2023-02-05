@@ -1,0 +1,80 @@
+<script setup>
+const props = defineProps({
+  label: {
+    type: String,
+    required: true,
+  },
+  className: {
+    type: String,
+    required: false,
+    default: "button",
+  },
+});
+</script>
+<template>
+  <button :class="className">{{ label }}</button>
+</template>
+
+<style scoped lang="scss">
+.searchBtn {
+  background: green;
+  color: white;
+  border-radius: 0.6em;
+  border: 1px solid green;
+  font-weight: bold;
+  font-size: medium;
+  &:hover,
+  &:active {
+    background: white;
+    color: green;
+  }
+}
+.reset {
+  background: #ff4742;
+  border: 1px solid #ff4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  &:hover,
+  &:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #ff4742;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+.MycartBtn {
+  align-self: right;
+  margin: 1em;
+  background: green;
+  color: white;
+  border-radius: 0.2em;
+  border: 1px solid green;
+  font-weight: bold;
+  font-size: medium;
+  &:hover,
+  &:active {
+    background: white;
+    color: green;
+  }
+}
+</style>
